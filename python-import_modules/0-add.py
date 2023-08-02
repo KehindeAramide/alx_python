@@ -1,4 +1,4 @@
-#import add function
+#import add function from mypackage
 from mypackage.add_0 import add
 a = 1
 b = 2
