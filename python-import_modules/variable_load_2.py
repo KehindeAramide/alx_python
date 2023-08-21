@@ -1,2 +1,2 @@
-def var1(a):
+def var(a):
     return a
