@@ -1,1 +1,2 @@
-a = 98
+def var1(a):
+    return a
