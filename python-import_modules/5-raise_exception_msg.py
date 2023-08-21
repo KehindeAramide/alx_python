@@ -1,5 +1,5 @@
 def raise_exception_msg(message=""):
-    raise NameError(message)
+    #raise NameError(message)
 
 # Call the function to see the exception
 try:
