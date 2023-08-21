@@ -11,4 +11,4 @@ def safe_print_division(a, b):
     finally:
         if 'result' in locals():
             print("Inside result: {}".format(result))
-            print("{:d} / {:d} = {}".format(a, b, result))
+            #print("{:d} / {:d} = {}".format(a, b, result))
