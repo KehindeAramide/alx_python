@@ -1,2 +1,3 @@
-def var(a):
-    return a
+#def var(a):
+#    return a
+a
