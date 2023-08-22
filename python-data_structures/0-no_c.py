@@ -1,4 +1,11 @@
 def no_c(my_string):
-    for c in my_string:
-        result = my_string.remove(c)
-        print(result)
+    new_string = " "
+    for char in my_string:
+        if char != 'c' and char != 'C':
+            new_string = char
+        return new_string
+    
+
+#print(no_c("Holberton School"))
+#print(no_c("Chicago"))
+#print(no_c("C is fun!"))
