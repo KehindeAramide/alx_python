@@ -5,5 +5,5 @@ class Square:
     def area(self):
         return self.__size ** 2
 
-    def __str__(self):
-        return f"Square with side length {self.__size}"
+    #def __str__(self):
+        #return f"Square with side length {self.__size}"
