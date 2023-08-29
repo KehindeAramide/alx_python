@@ -9,8 +9,6 @@ def __init__(self, size):
 def area(self):
     """representing the area of a square"""
     return self.__size ** 2
-def __str__(self):
-    return f"Square with lenght {self.__size}"
    
 
     
