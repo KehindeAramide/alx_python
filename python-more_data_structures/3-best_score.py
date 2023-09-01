@@ -6,9 +6,3 @@ def best_score(a_dictionary):
         if value > biggest_value:
             biggest_value = value
     return biggest_score
-
-
-
-    #for score in a_dictionary:
-        #biggest_integer.append(score)
-    #return biggest_integer 
