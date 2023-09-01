@@ -1,6 +1,5 @@
 def print_sorted_dictionary(a_dictionary):
-    if a_dictionary is None:
-        return
-    keys = sorted(a_dictionary.keys())
-    for key in keys:
-        print("{}: {}".format(key, a_dictionary[key]))
+    list_arr = list(a_dictionary.keys())
+    list_arr.sort()
+    for i in list_arr:
+        print("{}: {}".format(i, a_dictionary.get(i)))
