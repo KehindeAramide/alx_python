@@ -1,7 +1,6 @@
-"""Defining an empty class BaseGeometry."""
+"""Defines an empty class BaseGeometry."""
+
 
 class BaseGeometry:
-    """This is the base geometry."""
+    """Represent base geometry."""
     pass
-    """this is removing the __init_subclass__"""
-del BaseGeometry.__init_subclass__
