@@ -1,2 +1,4 @@
 """Defines an empty class BaseGeometry."""
-class BaseGeometry:"""Represent base geometry class."""
+class BaseGeometry:
+    """Represent base geometry class."""
+    pass
