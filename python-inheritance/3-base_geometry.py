@@ -4,3 +4,6 @@
 class BaseGeometry:
     """Represent base geometry."""
     pass
+
+bg = BaseGeometry()
+
