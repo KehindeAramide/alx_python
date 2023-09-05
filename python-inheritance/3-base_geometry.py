@@ -1,2 +1,4 @@
-"""Defines an empty class BaseGeometry."""
-class BaseGeometry():
+# Define an empty class named BaseGeometry
+class BaseGeometry:
+    # this represents BaseGeometry
+    pass
