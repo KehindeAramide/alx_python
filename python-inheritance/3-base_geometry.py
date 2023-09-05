@@ -3,4 +3,5 @@
 
 class BaseGeometry:
     """Represent base geometry."""
-    pass
+
+print(dir(BaseGeometry))
