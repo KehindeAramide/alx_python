@@ -6,4 +6,4 @@ class BaseGeometry:
     pass
 
 bg = BaseGeometry()
-
+print(bg)
