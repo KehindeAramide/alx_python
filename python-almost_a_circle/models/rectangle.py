@@ -36,8 +36,7 @@ class Rectangle(Base):
     """Setter for width"""
     @width.setter
     def width(self, width):
-        self.validate_integer(width, "width")
-        self.__width = width
+        self.__width = self.validate_integer(width, "width")
 
     """Getter for height"""
     @property
@@ -47,8 +46,7 @@ class Rectangle(Base):
     """Setter for height"""
     @height.setter
     def height(self, height):
-        self.validate_integer(height, "height")
-        self.__height = height
+        self.__height = self.validate_integer(height, "height")
 
     """Getter for x"""
     @property
@@ -58,8 +56,7 @@ class Rectangle(Base):
     """Setter for x"""
     @x.setter
     def x(self, x):
-        self.validate_non_negative_integer(x, "x")
-        self.__x = x
+        self.__x = self.validate_non_negative_integer(x, "x")
 
     """Getter for y"""
     @property
@@ -69,8 +66,8 @@ class Rectangle(Base):
     """Setter for y"""
     @y.setter
     def y(self, y):
-        self.validate_non_negative_integer(y, "y")
-        self.__y = y
+        self.__y = self.validate_non_negative_integer(y, "y")
+
     """Validation method for integer attributes"""
     def validate_integer(self, value, attribute_name):
         """
@@ -103,4 +100,11 @@ class Rectangle(Base):
             raise TypeError(f"{attribute_name} must be an integer")
         if value < 0:
             raise ValueError(f"{attribute_name} must be >= 0")
-        return value
+    """Public method to calculate and return the area"""
+    def area(self):
+        """
+        Calculate and return the area of the Rectangle.
+        Returns:
+            int: The area of the Rectangle.
+        """
+        return self.__width * self.__height
