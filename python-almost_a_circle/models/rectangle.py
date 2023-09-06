@@ -19,15 +19,15 @@ class Rectangle(Base):
         super().__init__(id)
         
         """Private instance attributes"""
-        self.__width = ()
-        self.__height = ()
-        self.__x = ()
-        self.__y = ()
+        self.__width = 0
+        self.__height = 0
+        self.__x = 0
+        self.__y = 0
 
         self.width = width
         self.height = height
-        self.x = x
-        self.y = y
+        self.__x = x
+        self.__y = y
     """Getter for width"""
     @property
     def width(self, width):
