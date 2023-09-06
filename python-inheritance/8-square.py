@@ -1,4 +1,4 @@
-"""Writing a class square that inherits from Rectangle(7-rectangle.py)."""
+"""Defines a Rectangle subclass Square."""
 Rectangle = __import__('7-rectangle.py').Rectangle
 
 
