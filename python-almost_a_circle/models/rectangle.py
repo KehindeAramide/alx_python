@@ -85,7 +85,7 @@ class Rectangle(Base):
             raise ValueError(f"{attribute_name} must be > 0")
         return value
 
-    """Validation method for non-negative integer attributes"""
+        """Validation method for non-negative integer attributes"""
     def validate_non_negative_integer(self, value, attribute_name):
         """
         Validate that the value is an integer and greater than or equal to zero.
@@ -100,7 +100,7 @@ class Rectangle(Base):
             raise TypeError(f"{attribute_name} must be an integer")
         if value < 0:
             raise ValueError(f"{attribute_name} must be >= 0")
-    """Public method to calculate and return the area"""
+        """Public method to calculate and return the area"""
     def area(self):
         """
         Calculate and return the area of the Rectangle.
@@ -128,7 +128,7 @@ class Rectangle(Base):
         """
         num_args = len(args)
         
-        # Assign arguments from *args if they exist and are not empty
+        """Assign arguments from *args if they exist and are not empty"""
         if num_args >= 1:
             self.id = args[0]
         if num_args >= 2:
@@ -140,6 +140,6 @@ class Rectangle(Base):
         if num_args >= 5:
             self.y = args[4]
         
-        # Assign keyworded arguments from **kwargs
+        """Assign keyworded arguments from **kwargs"""
         for key, value in kwargs.items():
             setattr(self, key, value)
