@@ -31,3 +31,13 @@ class Square(Rectangle):
             str: A string in the format [Square] (<id>) <x>/<y> - <size>.
         """
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+    """Overriding the size property to ensure size is always equal to width and height"""
+    @property
+    def size(self):
+        """Get or set the size of the square."""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.height = value
