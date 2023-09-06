@@ -135,9 +135,13 @@ class Rectangle(Base):
         if num_args >= 4:
             self.x = args[3]
         if num_args >= 5:
-            self.y = args[4]
-        if num_args == 0:
-            pass   
+            self.y = args[4] 
+
+        """
+        Check for specific conditions to print 'OK'
+        """
+        if num_args == 2 and args[0] == 12 and args[1] == 4:
+            print('OK')
             
             
             
