@@ -63,3 +63,18 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         self.__y = value
+    """Validation method for integer attributes"""
+    def validate_integer(self, value, attribute_name):
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute_name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{attribute_name} must be > 0")
+        return value
+
+    """Validation method for non-negative integer attributes"""
+    def validate_non_negative_integer(self, value, attribute_name):
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute_name} must be an integer")
+        if value < 0:
+            raise ValueError(f"{attribute_name} must be >= 0")
+        return value
