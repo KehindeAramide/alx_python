@@ -27,6 +27,7 @@ class Rectangle(Base):
     """Getter for width"""
     @property
     def width(self):
+        self.validate_integer(width, "width")
         return self.__width
 
     """Setter for width"""
@@ -38,6 +39,7 @@ class Rectangle(Base):
     """Getter for height"""
     @property
     def height(self):
+        self.validate_integer(height, "height")
         return self.__height
 
     """Setter for height"""
@@ -49,6 +51,7 @@ class Rectangle(Base):
     """Getter for x"""
     @property
     def x(self):
+        self.validate_non_negative_integer(x, "x")
         return self.__x
 
     """Setter for x"""
@@ -60,6 +63,7 @@ class Rectangle(Base):
     """Getter for y"""
     @property
     def y(self):
+        self.validate_non_negative_integer(y, "y")
         return self.__y
 
     """Setter for y"""
