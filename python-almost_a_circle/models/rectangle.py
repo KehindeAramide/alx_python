@@ -21,8 +21,8 @@ class Rectangle(Base):
         """Private instance attributes"""
         self.__width = 0
         self.__height = 0
-        self.__x = 0
-        self.__y = 0
+        self.__x = ()
+        self.__y = ()
 
         self.width = width
         self.height = height
@@ -115,7 +115,7 @@ class Rectangle(Base):
         """
         for _ in range(self.__height):
             print("#" * self.__width)
-            # Override the __str__ method
+            """Override the __str__ method"""
     def __str__(self):
         """
         Return a string representation of the Rectangle.
