@@ -108,7 +108,7 @@ class Rectangle(Base):
             int: The area of the Rectangle.
         """
         return self.__width * self.__height
-    """Public method to display the Rectangle"""
+        """Public method to display the Rectangle"""
     def display(self):
         """
         Print the Rectangle instance with '#' characters.
@@ -118,7 +118,7 @@ class Rectangle(Base):
         for _ in range (self.__height):
             print(" " * self.__x + "#" * self.__width)
             
-            # Public method to update attributes based on no-keyword arguments
+        """Public method to update attributes based on no-keyword arguments"""
     def update(self, *args):
         """
         Assign arguments to the id, width, height, x, and y attributes in the specified order.
