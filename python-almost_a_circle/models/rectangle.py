@@ -19,15 +19,18 @@ class Rectangle(Base):
         super().__init__(id)
         
         """Private instance attributes"""
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.__width = 0
+        self.__height = 0
+        self.__x = 0
+        self.__y = 0
 
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
     """Getter for width"""
     @property
     def width(self, width):
-        self.validate_integer(width, "width")
         return self.__width
 
     """Setter for width"""
@@ -39,7 +42,6 @@ class Rectangle(Base):
     """Getter for height"""
     @property
     def height(self, height):
-        self.validate_integer(height, "height")
         return self.__height
 
     """Setter for height"""
@@ -51,7 +53,6 @@ class Rectangle(Base):
     """Getter for x"""
     @property
     def x(self, x):
-        self.validate_non_negative_integer(x, "x")
         return self.__x
 
     """Setter for x"""
@@ -63,7 +64,6 @@ class Rectangle(Base):
     """Getter for y"""
     @property
     def y(self, y):
-        self.validate_non_negative_integer(y, "y")
         return self.__y
 
     """Setter for y"""
