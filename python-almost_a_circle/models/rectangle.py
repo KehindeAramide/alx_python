@@ -31,8 +31,9 @@ class Rectangle(Base):
 
     """Setter for width"""
     @width.setter
-    def width(self, value):
-        self.__width = value
+    def width(self, width):
+        self.validate_integer(width, "width")
+        self.__width = width
 
     """Getter for height"""
     @property
@@ -41,8 +42,9 @@ class Rectangle(Base):
 
     """Setter for height"""
     @height.setter
-    def height(self, value):
-        self.__height = value
+    def height(self, height):
+        self.validate_integer(height, "height")
+        self.__height = height
 
     """Getter for x"""
     @property
@@ -51,8 +53,9 @@ class Rectangle(Base):
 
     """Setter for x"""
     @x.setter
-    def x(self, value):
-        self.__x = value
+    def x(self, x):
+        self.validate_non_negative_integer(x, "x")
+        self.__x = x
 
     """Getter for y"""
     @property
@@ -61,7 +64,8 @@ class Rectangle(Base):
 
     """Setter for y"""
     @y.setter
-    def y(self, value):
+    def y(self, y):
+        self.validate_non_negative_integer(y, "y")
         self.__y = value
     """Validation method for integer attributes"""
     def validate_integer(self, value, attribute_name):
