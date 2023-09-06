@@ -136,6 +136,8 @@ class Rectangle(Base):
             self.x = args[3]
         if num_args >= 5:
             self.y = args[4]
+        if num_args == 0:
+            pass   
             
             
             
