@@ -4,6 +4,8 @@ from models.base import Base
 """Import the Base class from base.py"""
 
 class Rectangle(Base):
+    """Defining class Rectangle"""
+    
     def __init__(self, width, height, x=0, y=0, id=None):
         """Calling the constructor of the Base class and pass the id"""
         super().__init__(id)
