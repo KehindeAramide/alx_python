@@ -7,12 +7,6 @@ class BaseGeometry:
     '''
     
     def __init_subclass__(cls):
-        bg = BaseGeometry()
-        """Creating an instance for BaseGeometry"""
-        attributes_and_methods = dir(bg)
-        """Getting attributes and methods of instance"""
-        class_attributes_and_methods = dir(BaseGeometry)
-
         pass
     
     def __dir__(self):
