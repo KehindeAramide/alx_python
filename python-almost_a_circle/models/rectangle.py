@@ -19,8 +19,8 @@ class Rectangle(Base):
         super().__init__(id)
         
         """Private instance attributes"""
-        self.__width = 0
-        self.__height = 0
+        self.__width = ()
+        self.__height = ()
         self.__x = ()
         self.__y = ()
 
