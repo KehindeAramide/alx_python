@@ -1,8 +1,10 @@
+"""This defines the Base class"""
 class Base:
-    # Private class attribute
+    
+    """Private class attribute"""
     __nb_objects = 0
 
-    # Class constructor
+    """Class constructor"""
     def __init__(self, id=None):
         if id is not None:
             self.id = id
