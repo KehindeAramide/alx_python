@@ -65,6 +65,15 @@ class Rectangle(Base):
         self.__y = value
     """Validation method for integer attributes"""
     def validate_integer(self, value, attribute_name):
+        """
+        Validate that the value is an integer and greater than zero.
+        Args:
+            value (int): The value to be validated.
+            attribute_name (str): The name of the attribute being validated.
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is not greater than zero.
+        """
         if not isinstance(value, int):
             raise TypeError(f"{attribute_name} must be an integer")
         if value <= 0:
@@ -73,6 +82,15 @@ class Rectangle(Base):
 
     """Validation method for non-negative integer attributes"""
     def validate_non_negative_integer(self, value, attribute_name):
+        """
+        Validate that the value is an integer and greater than or equal to zero.
+        Args:
+            value (int): The value to be validated.
+            attribute_name (str): The name of the attribute being validated.
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is not greater than or equal to zero.
+        """
         if not isinstance(value, int):
             raise TypeError(f"{attribute_name} must be an integer")
         if value < 0:
