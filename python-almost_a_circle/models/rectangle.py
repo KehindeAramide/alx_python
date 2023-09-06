@@ -1,4 +1,7 @@
-"""Creating the first triangle by importing the Base class from base.py"""
+"""Creating the first Rectangle by that inherits from Base"""
+
+from models.base import Base  
+"""Import the Base class from base.py"""
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
