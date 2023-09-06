@@ -113,8 +113,10 @@ class Rectangle(Base):
         """
         Print the Rectangle instance with '#' characters.
         """
-        for _ in range(self.__height):
-            print("#" * self.__width)
+        for _ in range(self.__y):
+            print()
+        for _ in range (self.__height):
+            print(" " * self.__x + "#" * self.__width)
             """Override the __str__ method"""
     def __str__(self):
         """
