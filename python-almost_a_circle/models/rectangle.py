@@ -119,13 +119,16 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
             
         """Public method to update attributes based on no-keyword arguments"""
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
-        Assign arguments to the id, width, height, x, and y attributes in the specified order.
+        Assign arguments and keyworded arguments to the id, width, height, x, and y attributes.
         Args:
             *args: No-keyword arguments in the order id, width, height, x, y.
+            **kwargs: Keyworded arguments representing attribute names and values.
         """
         num_args = len(args)
+        
+        # Assign arguments from *args if they exist and are not empty
         if num_args >= 1:
             self.id = args[0]
         if num_args >= 2:
@@ -135,27 +138,8 @@ class Rectangle(Base):
         if num_args >= 4:
             self.x = args[3]
         if num_args >= 5:
-            self.y = args[4] 
-
-        """
-        Check for specific conditions to print 'OK'
-        """
-        if num_args == 2 and args[0] == 12 and args[1] == 4:
-            print('OK')
-            
-            
-            
-            
-            
-            
-            
-            
-            #"""Override the __str__ method"""
-    #def __str__(self):
-        #"""
-       # Return a string representation of the Rectangle.
-        #Format: [Rectangle] (<id>) <x>/<y> - <width>/<height>
-        #Returns:
-            #str: The string representation of the Rectangle.
-        #"""
-        #return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+            self.y = args[4]
+        
+        # Assign keyworded arguments from **kwargs
+        for key, value in kwargs.items():
+            setattr(self, key, value)
