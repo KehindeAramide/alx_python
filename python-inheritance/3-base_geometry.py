@@ -5,5 +5,5 @@ class BaseGeometry:
     '''
     this represents BaseGeometry
     '''
-    def __init_subclass__(cls):
+    def __init__(self):
         pass
