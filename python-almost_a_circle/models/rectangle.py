@@ -117,12 +117,39 @@ class Rectangle(Base):
             print()
         for _ in range (self.__height):
             print(" " * self.__x + "#" * self.__width)
-            """Override the __str__ method"""
-    def __str__(self):
+            
+            # Public method to update attributes based on no-keyword arguments
+    def update(self, *args):
         """
-        Return a string representation of the Rectangle.
-        Format: [Rectangle] (<id>) <x>/<y> - <width>/<height>
-        Returns:
-            str: The string representation of the Rectangle.
+        Assign arguments to the id, width, height, x, and y attributes in the specified order.
+        Args:
+            *args: No-keyword arguments in the order id, width, height, x, y.
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        num_args = len(args)
+        if num_args >= 1:
+            self.id = args[0]
+        if num_args >= 2:
+            self.width = args[1]
+        if num_args >= 3:
+            self.height = args[2]
+        if num_args >= 4:
+            self.x = args[3]
+        if num_args >= 5:
+            self.y = args[4]
+            
+            
+            
+            
+            
+            
+            
+            
+            #"""Override the __str__ method"""
+    #def __str__(self):
+        #"""
+       # Return a string representation of the Rectangle.
+        #Format: [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        #Returns:
+            #str: The string representation of the Rectangle.
+        #"""
+        #return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
