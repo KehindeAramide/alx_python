@@ -7,7 +7,7 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """Intialize a new Rectangle."""
-        rectangle = Rectangle()
+        BaseGeometry = Rectangle()
         attributes_and_methods = dir(Rectangle)
         """Getting attributes and methods of instance"""
         class_attributes_and_methods = dir(Rectangle)
