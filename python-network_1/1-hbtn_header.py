@@ -21,6 +21,8 @@ if response.status_code == 200:
         # Print the value of the 'X-Request-Id' header after stripping whitespace
         print(response.headers['X-Request-Id'].strip())
     else:
+        # Print a message indicating that the header was not found
         print("X-Request-Id header not found in the response.")
 else:
+    # Print an error message with the status code
     print(f"Request failed with status code {response.status_code}")
