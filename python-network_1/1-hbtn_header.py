@@ -14,5 +14,5 @@ if 'X-Request-Id' in response.headers:
     """Print the value of the 'X-Request-Id' header"""
     print(response.headers['X-Request-Id'])
 else:
-    """Print a message when the header is not found"""
-    print("X-Request-Id header not found in the response.")
+    """Print "None" when the header is not found"""
+    print("None")
