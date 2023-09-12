@@ -13,7 +13,7 @@ headers = {'Authorization': 'Basic ' + f'{username}:{token}'.encode('utf-8').hex
 url = 'https://api.github.com/user'
 response = requests.get(url, headers=headers)
 
-"""Check if the request was successful (status code 200)""""
+"""Check if the request was successful (status code 200)"""
 if response.status_code == 200:
     user_data = response.json()
     user_id = user_data['id']
