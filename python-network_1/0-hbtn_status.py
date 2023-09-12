@@ -12,10 +12,10 @@ if response.status_code == 200:
     else:
      """Print None when the header is not found"""
     print("None")
-else:
-    """Print an error message with the status code"""
-    print(f"Request failed with status code {response.status_code}")
-
+"""Print the response body with its type and content"""
+print("Body response:")
+print(f"\t- type: {type(response.text)}")
+print(f"\t- content: {response.text}")
 
 
 
