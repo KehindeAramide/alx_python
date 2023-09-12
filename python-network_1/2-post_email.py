@@ -1,25 +1,21 @@
+
 import requests
 import sys
-
 """Check if both URL and email are provided as command-line arguments"""
 if len(sys.argv) < 3:
-    print("Usage: python script.py <URL> <email>")
-    sys.exit(1)
+    sys.exit("Usage: python script.py <URL> <email>")
 
-"""Get the URL and email from the command-line arguments"""
-url = sys.argv[1]
-email = sys.argv[2]
-
-"""Define the data to send in the POST request"""
+url, email = sys.argv[1], sys.argv[2]
 data = {'email': email}
+"""Get the URL and email from the command-line arguments"""
 
-"""Send a POST request to the specified URL with the email as a parameter"""
 response = requests.post(url, data=data)
+"""Send a POST request to the specified URL with the email as a parameter"""
 
-"""Check if the request was successful (status code 200)""""
 if response.status_code == 200:
+    """Check if the request was successful (status code 200)"""
+    print(f"Email: {email}")
     """Print the response content"""
-    print(response.text)
 else:
-    """Print an error message with the status code if the request fails"""
     print(f"Request failed with status code {response.status_code}")
+    """Print an error message with the status code if the request fails"""
