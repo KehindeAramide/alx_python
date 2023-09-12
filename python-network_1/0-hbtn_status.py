@@ -11,7 +11,7 @@ response = requests.get(url)
 """Check if the request was successful (status code 200)"""
 if response.status_code == 200:
     """Print the response content"""
-    print(response.text)
+    print("\t" + response.text)
 else:
     """Print an error message with the status code if the request fails"""
     print(f"Request failed with status code {response.status_code}")
