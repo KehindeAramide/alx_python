@@ -1,9 +1,9 @@
-"""Writing a Python script that takes in a URL, sends a request to the URL and displays the value of the variable X-Request-Id in the response header
-"""
+"""Writing a script that fetches the below url"""
+
 import requests
 import sys
 
-"""Check if the command-line argument is provided"""
+"""Check if a URL is provided as a command-line argument"""
 if len(sys.argv) < 2:
     print("Usage: python script.py <URL>")
     sys.exit(1)
@@ -18,11 +18,11 @@ response = requests.get(url)
 if response.status_code == 200:
     """Check if the 'X-Request-Id' header is present in the response"""
     if 'X-Request-Id' in response.headers:
-        """Print the value of the 'X-Request-Id' header after stripping whitespace"""
-        print(response.headers['X-Request-Id'].strip())
+        """Print the value of the 'X-Request-Id' header"""
+        print(response.headers['X-Request-Id'])
     else:
-        """Print a message indicating that the header was not found"""
+        """Print a message when the header is not found"""
         print("X-Request-Id header not found in the response.")
 else:
-    """Print an error message with the status code"""
+    """Print an error message with the status code if the request fails"""
     print(f"Request failed with status code {response.status_code}")
