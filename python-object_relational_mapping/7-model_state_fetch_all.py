@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """List all State objects from the database hbtn_0e_6_usa"""
 
 import sys
@@ -31,4 +32,3 @@ if __name__ == "__main__":
 
     # Close the session
     session.close()
-
