@@ -1,3 +1,4 @@
+"""Copy the previous task to a new script that starts a Flask web application:"""
 from flask import Flask, render_template
 app = Flask(__name__)
 
