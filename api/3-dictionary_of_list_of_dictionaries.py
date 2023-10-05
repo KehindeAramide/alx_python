@@ -1,21 +1,22 @@
 import json
+import requests
 
-# Your existing data
-data = {
-    "1": [{"username": "Bret", "task": "delectus aut autem", "completed": False},
-          {"username": "Bret", "task": "quis ut nam facilis et officia qui", "completed": False},
-          # ... other tasks for user 1 ...
-          ],
-    "2": [{"username": "Antonette", "task": "suscipit repellat esse quibusdam voluptatem incidunt", "completed": False},
-          {"username": "Antonette", "task": "distinctio vitae autem nihil ut molestias quo", "completed": True},
-          # ... other tasks for user 2 ...
-          ],
-    # ... other users ...
-}
+users_url = "https://jsonplaceholder.typicode.com/users"
 
-# Convert data to JSON format
-json_data = json.dumps(data, indent=4)
+def user_info():
+    with open('todo_all_employees.json', 'r') as f:
+        student_json = json.load(f)
 
-# Write JSON data to a file
-with open("todo_all_employees.json", "w") as json_file:
-    json_file.write(json_data)
+    correct_json = requests.get(users_url).json()
+
+    student_json = {int(key): value for key, value in student_json.items()}  # Convert keys to integers
+
+    for correct_entry in correct_json:
+        if correct_entry not in student_json:
+            print("User ID {} Found: Incorrect".format(correct_entry))
+            return
+    
+    print("All users found: OK")
+
+if __name__ == "__main__":
+    user_info()
