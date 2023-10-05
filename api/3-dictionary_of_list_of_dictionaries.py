@@ -9,10 +9,13 @@ def user_info():
 
     correct_json = requests.get(users_url).json()
 
-    correct_ids = [entry['id'] for entry in correct_json]  # Extract IDs from correct_json
+    # Convert keys of student_json to integers
+    student_json = {int(key): value for key, value in student_json.items()}
+
+    correct_ids = [entry['id'] for entry in correct_json]
 
     for student_entry in student_json:
-        if int(student_entry) not in correct_ids:
+        if student_entry not in correct_ids:
             print("User ID {} Found: Incorrect".format(student_entry))
             return
     
