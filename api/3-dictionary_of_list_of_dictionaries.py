@@ -12,7 +12,7 @@ def user_info():
     correct_ids = [entry['id'] for entry in correct_json]  # Extract IDs from correct_json
 
     for student_entry in student_json:
-        if student_entry not in correct_ids:
+        if int(student_entry) not in correct_ids:
             print("User ID {} Found: Incorrect".format(student_entry))
             return
     
