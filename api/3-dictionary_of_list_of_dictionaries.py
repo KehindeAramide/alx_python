@@ -26,3 +26,6 @@ def user_info():
             return
     
     print("All users found: OK")
+
+if __name__ == "__main__":
+    user_info()
