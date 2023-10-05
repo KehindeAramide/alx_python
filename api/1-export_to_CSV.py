@@ -2,10 +2,6 @@ import csv
 import requests
 import sys
 
-import requests
-import csv
-import sys
-
 def get_employee_info(employee_id):
     # Get employee details
     employee_response = requests.get(f'https://jsonplaceholder.typicode.com/users/{employee_id}')
